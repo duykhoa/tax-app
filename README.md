@@ -36,6 +36,7 @@ So there are the class names with behavior attached
 
 So the flow (I mean how end developer using your library)
 
+```ruby
 # Scenario 1: basket is read from file
 #   Construct basket from csv file
 # in main.rb
@@ -64,3 +65,4 @@ basket.add_item(hamburger, quantity: 3)
 
 # Otherwise, like show total price, task, or print receipt,
 # It's totally same with Scenario 1
+```
