@@ -12,6 +12,7 @@ So there are the class names with behavior attached
   + name
   + price
   + SALE_TAX = 10%
+  + tax_rate = imported_tax (5%) + SALE_TAX
 
 - FreeDutyGood < Good
   + inherit Good
@@ -48,18 +49,18 @@ receipt.print # Print the receipt to output
 # Scenario 2: basket is input by user
 #
 # Assumpt user has a list of products
-# products << headached_pill
-# products << perfume
-# products << hamburger
+# - headached_pill
+# - perfume
+# - hamburger
 #
 # So when user add product to shopping basket
 basket = Basket.new
 
 # Add 3 perfume bottles
-basket.add_product(perfume, quantity: 3)
+basket.add_item(perfume, quantity: 3)
 
 # Add 10 hamburger
-basket.add_product(hamburger, quantity: 3)
+basket.add_item(hamburger, quantity: 3)
 
 # Otherwise, like show total price, task, or print receipt,
 # It's totally same with Scenario 1
